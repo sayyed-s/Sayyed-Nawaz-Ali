@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nawaz Ali | Full Stack Web Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+nav h2 {
+    font-weight: 700;
+    color: #38bdf8;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #38bdf8;
+}
+section {
+    padding: 100px 8% 60px;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 48px;
+    color: #38bdf8;
+}
+.hero h3 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+.hero p {
+    max-width: 600px;
+    margin-top: 15px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #0ea5e9;
+}
+.skills .skill {
+    margin-bottom: 20px;
+}
+.progress {
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 10px;
+    background: #38bdf8;
+    width: 0;
+    transition: width 1.5s ease;
+}
+.timeline {
+    border-left: 3px solid #38bdf8;
+    padding-left: 20px;
+}
+.timeline-item {
+    margin-bottom: 30px;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.education-item {
+    margin-bottom: 20px;
+}
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media(max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    nav.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 8%;
+        top: 60px;
+        background: #1e293b;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #38bdf8;
+    }
+}
+.menu-toggle {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav id="navbar">
+        <h2>Nawaz Ali</h2>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero fade-in">
+    <h1>Sayyed Nawaz Ali</h1>
+    <h3>Full Stack Web Developer & Digital Marketer</h3>
+    <p>I build modern, high-converting websites and digital solutions that help businesses grow online. Passionate about clean design, performance, and user experience.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I am a full stack web developer and founder of NexTrend Marketing. I specialize in creating responsive websites, business portfolios, landing pages, and digital marketing systems that drive results. My goal is to combine creativity with strategy to deliver powerful online experiences.</p>
+</section>
+
+<section id="skills" class="skills fade-in">
+    <h2>Skills</h2>
+    <div class="skill">
+        <p>HTML & CSS</p>
+        <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+    </div>
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+    </div>
+    <div class="skill">
+        <p>Responsive Design</p>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+    </div>
+    <div class="skill">
+        <p>Digital Marketing</p>
+        <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+    </div>
+</section>
+
+<section id="experience" class="fade-in">
+    <h2>Work Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h4>Founder - NexTrend Marketing</h4>
+            <p>2024 - Present</p>
+            <p>Providing website development and digital marketing solutions for businesses.</p>
+        </div>
+        <div class="timeline-item">
+            <h4>Freelance Web Developer</h4>
+            <p>2023 - 2024</p>
+            <p>Built business websites, landing pages, and branding assets for clients.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects fade-in">
+    <h2>Projects</h2>
+    <div class="card">
+        <h4>NexTrend Marketing Website</h4>
+        <p>Professional digital agency website focused on lead generation.</p>
+    </div>
+    <div class="card">
+        <h4>Dynamic QR Code Generator</h4>
+        <p>Custom tool for businesses to generate trackable QR codes.</p>
+    </div>
+    <div class="card">
+        <h4>Business Portfolio Templates</h4>
+        <p>High-converting website templates for small businesses.</p>
+    </div>
+</section>
+
+<section id="education" class="fade-in">
+    <h2>Education</h2>
+    <div class="education-item">
+        <h4>CBSE - Class 10</h4>
+        <p>Currently pursuing secondary education.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@nextrendmarketing.in">info@nextrendmarketing.in</a></p>
+    <p>Instagram: <a href="https://instagram.com/nextrendmarketingofficial" target="_blank">@nextrendmarketingofficial</a></p>
+    <p>Phone: <a href="tel:+917599005771">+91 75990 05771</a></p>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('active');
+}
+
+const faders = document.querySelectorAll('.fade-in');
+const options = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}, options);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+const bars = document.querySelectorAll('.progress-bar');
+const skillsObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            const bar = entry.target;
+            bar.style.width = bar.getAttribute('data-width');
+            observer.unobserve(bar);
+        }
+    });
+}, { threshold: 0.5 });
+
+bars.forEach(bar => {
+    skillsObserver.observe(bar);
+});
+</script>
+
+</body>
+</html>
